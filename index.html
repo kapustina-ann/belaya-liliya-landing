@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ЖК «Белая лилия» — клубный квартал в Ярославле</title>
+<meta name="description" content="Два трёхэтажных дома из белого дагестанского камня в Заволжском районе Ярославля. Потолки до 3,3 м, своё газовое отопление, закрытый двор. Старт продаж скоро.">
+<meta name="theme-color" content="#FBF9F5">
+<link rel="icon" href="img/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ЖК «Белая лилия» — клубный квартал в Ярославле">
+<meta property="og:description" content="Два трёхэтажных дома из белого дагестанского камня в Заволжском районе Ярославля.">
+<meta property="og:image" content="img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap">
+
+<style>
+:root{
+  --paper:#FBF9F5;
+  --sand:#F0EBE1;
+  --stone:#E3DCCE;
+  --ink:#2A2520;
+  --muted:#6E6659;
+  --accent:#7A6039;
+  --line:#DED6C7;
+  --gutter:clamp(18px,4vw,64px);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:Inter,"Segoe UI",system-ui,sans-serif;font-weight:300;
+  font-size:clamp(15.5px,.9rem+.25vw,17px);line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;line-height:1.08}
+h1{font-size:clamp(34px,4.6vw,68px);text-transform:uppercase;letter-spacing:.06em;line-height:1.14}
+h2{font-size:clamp(26px,3.2vw,46px);letter-spacing:.01em}
+h3{font-size:clamp(18px,1.6vw,22px);letter-spacing:.02em}
+
+.wrap{width:100%;max-width:1360px;margin-inline:auto;padding-inline:var(--gutter)}
+.section{padding-block:clamp(60px,8vw,140px)}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.lede{max-width:54ch;color:var(--muted);font-size:clamp(16px,1vw,18px)}
+.thin{height:1px;background:var(--line);border:0;margin:0}
+
+/* ——— шапка: светлая плашка, элементы всегда читаются ——— */
+.top{
+  position:fixed;inset-inline:0;top:0;z-index:50;
+  background:color-mix(in srgb,var(--paper) 90%,transparent);
+  backdrop-filter:blur(14px) saturate(1.1);
+  border-bottom:1px solid var(--line);
+  transition:background-color .4s var(--ease),box-shadow .4s var(--ease),transform .5s var(--ease);
+}
+.top.solid{background:color-mix(in srgb,var(--paper) 97%,transparent);box-shadow:0 1px 0 var(--line),0 12px 32px -28px rgba(42,37,32,.5)}
+.top .wrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:92px;padding-block:14px}
+
+.pill{
+  display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 24px;
+  border:1px solid var(--ink);border-radius:999px;text-decoration:none;color:var(--ink);
+  font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:400;white-space:nowrap;
+  transition:background-color .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease);
+}
+.pill:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.pill-solid{background:var(--ink);color:var(--paper)}
+.pill-solid:hover{background:transparent;color:var(--ink)}
+
+.brand-center{position:absolute;left:50%;transform:translateX(-50%);display:flex;align-items:center;min-height:44px}
+.brand-center img{height:56px;width:auto}
+@media (max-width:700px){
+  .brand-center img{height:42px}
+  .top .wrap{min-height:78px;justify-content:flex-end}
+}
+@media (max-width:560px){
+  .brand-center img{height:34px}
+  .top .pill{padding:10px 14px;font-size:11px;letter-spacing:.06em;min-height:44px}
+}
+.top-phone{text-decoration:none;font-size:15px;font-weight:400;letter-spacing:.02em;white-space:nowrap;min-height:44px;display:none;align-items:center;color:var(--ink)}
+.top-phone:hover{color:var(--accent)}
+
+/* ——— герой: экстремальный кроп, камера едет при скролле ——— */
+.hero{position:relative;height:clamp(560px,92vh,940px);overflow:hidden;background:var(--stone);margin-top:92px}
+@media (max-width:700px){ .hero{margin-top:78px} }
+.hero-frame{position:absolute;inset:-6% 0 -6% 0;will-change:transform}
+.hero-frame picture{display:block;width:100%;height:100%}
+.hero-frame img{width:100%;height:100%;object-fit:cover;object-position:center 58%}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,20,16,.34) 0%,rgba(24,20,16,.05) 34%,rgba(24,20,16,.42) 100%)}
+.hero-inner{position:absolute;inset:auto 0 0 0;padding-bottom:clamp(30px,5vw,64px)}
+.hero-inner .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.hero-copy{color:var(--paper);max-width:640px}
+.hero-copy h1{margin-bottom:14px}
+.hero-copy p{color:rgba(251,249,245,.88);max-width:46ch;font-size:clamp(15px,1vw,17px)}
+.hero-note{
+  background:color-mix(in srgb,var(--paper) 94%,transparent);color:var(--ink);
+  padding:18px 22px;max-width:320px;display:flex;flex-direction:column;gap:6px;
+}
+.hero-note b{font-family:"Playfair Display",serif;font-weight:400;font-size:20px}
+.hero-note span{font-size:13px;color:var(--muted)}
+.hero-note a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;margin-top:4px}
+.hero-note a:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* ——— появление строк из-под линии ——— */
+.rise{overflow:hidden}
+.rise > *{display:block}
+html.motion .rise > *{transform:translateY(105%);transition:transform 1s var(--ease)}
+html.motion .rise.in > *{transform:none}
+html.motion .fade{opacity:0;transform:translateY(16px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+html.motion .fade.in{opacity:1;transform:none}
+html.motion .fade.d1{transition-delay:.12s}
+html.motion .fade.d2{transition-delay:.24s}
+
+/* ——— параметры ——— */
+.params{border-bottom:1px solid var(--line)}
+.params .wrap{display:grid;grid-template-columns:repeat(2,1fr)}
+.params .wrap > div{padding:26px 22px 26px 0;border-right:1px solid var(--line)}
+.params .wrap > div:nth-child(2n){border-right:0;padding-left:22px}
+.params .wrap > div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.params b{display:block;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(28px,2.6vw,38px);line-height:1}
+.params span{display:block;font-size:12.5px;color:var(--muted);margin-top:8px;letter-spacing:.02em}
+
+/* ——— полосы ——— */
+.split{display:grid;gap:clamp(26px,4vw,72px);align-items:center}
+.stack{display:flex;flex-direction:column;gap:20px}
+.frame{overflow:hidden;background:var(--stone)}
+.frame img{width:100%;transition:transform 1.4s var(--ease)}
+.frame:hover img{transform:scale(1.04)}
+.frame-wide img{aspect-ratio:16/10;object-fit:cover}
+.frame-tall img{aspect-ratio:3/4;object-fit:cover}
+
+.spec{display:grid;margin-top:8px}
+.spec > div{display:grid;grid-template-columns:minmax(96px,150px) 1fr;gap:24px;padding-block:16px;border-top:1px solid var(--line);align-items:baseline}
+.spec > div:last-child{border-bottom:1px solid var(--line)}
+.spec dt{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.spec dd{margin:0;font-size:15.5px}
+
+/* ——— высота ——— */
+.heights{background:var(--sand)}
+.heights .wrap{display:grid;gap:clamp(24px,4vw,64px);align-items:end}
+.metric b{display:block;font-family:"Playfair Display",serif;font-weight:400;font-size:clamp(56px,7vw,110px);line-height:.9;font-variant-numeric:tabular-nums}
+.metric span{display:block;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:12px}
+
+/* ——— галерея: журнальные полосы, ритм рядов меняется ——— */
+.gal-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.gal-count{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+.gal{display:grid;grid-template-columns:1fr;gap:clamp(14px,1.8vw,22px);margin-top:clamp(28px,4vw,48px);--h:clamp(230px,56vw,320px)}
+.gal figure{margin:0;display:flex;flex-direction:column}
+.gal .shot{overflow:hidden;background:var(--stone)}
+.gal .shot img{width:100%;height:var(--h,300px);object-fit:cover;transition:transform 1.5s var(--ease)}
+.gal figure:hover .shot img{transform:scale(1.05)}
+.gal figcaption{
+  font-size:12.5px;color:var(--muted);padding-top:12px;letter-spacing:.02em;
+  display:flex;align-items:baseline;gap:10px;
+}
+.gal figcaption i{
+  font-style:normal;font-family:"Playfair Display",serif;color:var(--accent);
+  font-size:12px;letter-spacing:.06em;flex:none;
+}
+
+
+@media (min-width:640px){
+  .gal{grid-template-columns:repeat(6,1fr)}
+  /* ряд 1 — широкий кадр и вертикальный компаньон */
+  .gal .g-a{grid-column:span 4;--h:clamp(300px,30vw,430px)}
+  .gal .g-b{grid-column:span 2;--h:clamp(300px,30vw,430px)}
+  /* ряд 2 — три равных */
+  .gal .g-c,.gal .g-d,.gal .g-e{grid-column:span 2;--h:clamp(220px,21vw,300px)}
+  /* ряд 3 — зеркальный первому */
+  .gal .g-f{grid-column:span 2;--h:clamp(300px,30vw,430px)}
+  .gal .g-g{grid-column:span 4;--h:clamp(300px,30vw,430px)}
+}
+
+/* ——— квартиры ——— */
+.flats{margin-top:clamp(26px,4vw,52px);border-top:1px solid var(--line)}
+.flats article{padding:28px 0;border-bottom:1px solid var(--line);display:grid;gap:10px;transition:background-color .4s var(--ease)}
+.flats .n{font-family:"Playfair Display",serif;font-size:clamp(34px,4vw,54px);line-height:.9}
+.flats p{color:var(--muted);max-width:46ch;font-size:15.5px}
+.flats .tag{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+
+/* ——— шаги ——— */
+.steps{display:grid;gap:clamp(22px,3vw,44px);margin-top:clamp(28px,4vw,54px)}
+.steps article{border-top:1px solid var(--ink);padding-top:20px;display:flex;flex-direction:column;gap:8px}
+.steps .n{font-family:"Playfair Display",serif;font-size:14px;color:var(--accent);letter-spacing:.1em}
+.steps p{color:var(--muted);font-size:15px}
+
+/* ——— заявка ——— */
+.lead{background:var(--sand)}
+.lead .wrap{display:grid;gap:clamp(28px,4vw,72px);align-items:start}
+form{display:flex;flex-direction:column;gap:18px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+input[type=text],input[type=tel],select{
+  width:100%;min-height:52px;padding:14px 0;border:0;border-bottom:1px solid var(--muted);border-radius:0;
+  background:transparent;color:var(--ink);font-family:inherit;font-size:16px;font-weight:300;
+  transition:border-color .35s var(--ease);
+}
+input:hover,select:hover{border-bottom-color:var(--ink)}
+input:focus,select:focus{outline:none;border-bottom-color:var(--accent);border-bottom-width:2px}
+input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+input[aria-invalid="true"]{border-bottom-color:#9B2C2C;border-bottom-width:2px}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,currentColor 50%),linear-gradient(135deg,currentColor 50%,transparent 50%);background-position:calc(100% - 14px) 24px,calc(100% - 9px) 24px;background-size:5px 5px;background-repeat:no-repeat}
+.consent{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:center;min-height:44px;font-size:13px;color:var(--muted);cursor:pointer}
+.consent input{width:24px;height:24px;min-height:0;padding:0;accent-color:var(--accent)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:15px 34px;
+  background:var(--ink);color:var(--paper);border:1px solid var(--ink);border-radius:999px;cursor:pointer;
+  font-family:inherit;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
+  transition:background-color .4s var(--ease),color .4s var(--ease);
+}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.err{font-size:13px;color:#9B2C2C}
+.ok{border:1px solid var(--accent);padding:20px;font-size:15px}
+.note{font-size:13px;color:var(--muted)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+[id]{scroll-margin-top:104px}
+
+footer{padding-block:clamp(40px,5vw,76px);border-top:1px solid var(--line)}
+.foot{display:grid;gap:28px}
+.foot img{height:68px;width:auto}
+.foot h2{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:14px;font-family:Inter,sans-serif}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:15px}
+.foot a{text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.foot a:hover{color:var(--accent)}
+.legal{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);line-height:1.6}
+.legal p{max-width:106ch;margin-bottom:8px}
+
+.callbar{position:fixed;inset-inline:0;bottom:0;z-index:55;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.callbar a{min-height:56px;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.callbar .c1{background:var(--paper);color:var(--ink)}
+.callbar .c2{background:var(--ink);color:var(--paper)}
+
+@media (min-width:768px){
+  .params .wrap{grid-template-columns:repeat(4,1fr)}
+  .params .wrap > div{border-bottom:0!important;padding-left:22px}
+  .params .wrap > div:first-child{padding-left:0}
+  .params .wrap > div:last-child{border-right:0}
+  .split{grid-template-columns:1fr 1fr}
+  .heights .wrap{grid-template-columns:1.2fr auto auto}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .flats article{grid-template-columns:130px 1fr auto;align-items:center;gap:28px}
+  .lead .wrap{grid-template-columns:1fr 1fr}
+  .foot{grid-template-columns:1.4fr 1fr 1fr}
+}
+@media (min-width:1024px){
+  .top-phone{display:inline-flex}
+  .callbar{display:none}
+  footer{padding-bottom:clamp(40px,5vw,76px)}
+}
+@media (max-width:1023px){ footer{padding-bottom:98px} }
+@media (max-width:700px){
+  .hero-veil{background:linear-gradient(180deg,rgba(24,20,16,.30) 0%,rgba(24,20,16,.06) 26%,rgba(24,20,16,.58) 62%,rgba(24,20,16,.78) 100%)}
+}
+@media (max-width:560px){ .hero-note{max-width:none;width:100%} .gal figure{flex:0 0 86%} }
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  html.motion .rise > *,html.motion .fade{transform:none;opacity:1}
+}
+
+/* ============ ДВИЖЕНИЕ ============ */
+
+/* полоса прочитанного */
+.progress{position:fixed;inset-inline:0;top:0;height:2px;z-index:60;background:transparent;pointer-events:none}
+.progress i{display:block;height:100%;width:0;background:var(--accent);transform-origin:left}
+
+/* кадры проявляются из-под маски */
+html.motion .mask{clip-path:inset(0 0 100% 0);transition:clip-path 1.2s var(--ease)}
+html.motion .mask.in{clip-path:inset(0 0 0 0)}
+
+/* заголовок собирается по словам */
+html.motion .words span{display:inline-block;transform:translateY(105%);opacity:0;transition:transform .9s var(--ease),opacity .7s var(--ease)}
+html.motion .words.in span{transform:none;opacity:1}
+.words{overflow:hidden}
+
+/* цифры досчитываются */
+.params b{font-variant-numeric:tabular-nums}
+
+/* бегущая строка фактов */
+.ticker{border-block:1px solid var(--line);overflow:hidden;background:var(--paper)}
+.ticker-row{display:flex;gap:0;width:max-content;animation:slide 38s linear infinite}
+.ticker-row span{
+  display:inline-flex;align-items:center;gap:26px;padding:16px 26px;white-space:nowrap;
+  font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);
+}
+.ticker-row span::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);flex:none}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker:hover .ticker-row{animation-play-state:paused}
+
+
+/* кнопки слегка тянутся к курсору */
+.pill,.btn{will-change:transform}
+
+/* фото в секциях плывут медленнее текста */
+.par{will-change:transform}
+
+/* фирменный мотив в фоне секций */
+.bg-lily{position:relative;overflow:hidden}
+.bg-lily > .wrap{position:relative;z-index:1}
+.lily{
+  position:absolute;pointer-events:none;user-select:none;
+  width:min(44vw,420px);height:auto;opacity:.07;
+}
+.lily-1{top:-14%;right:-8%;transform:rotate(12deg)}
+.lily-2{bottom:-20%;left:-10%;transform:rotate(154deg)}
+.lily-3{bottom:-24%;right:-6%;width:min(34vw,300px);opacity:.06}
+@media (max-width:640px){ .lily-1{display:none} }
+html.motion .lily{transition:transform 1.2s var(--ease)}
+</style>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><i id="progress-bar"></i></div>
+
+<header class="top" id="top-bar">
+  <div class="wrap">
+    <a class="top-phone" href="tel:+74852333362">+7 (4852) 33-33-62</a>
+    <a class="brand-center" href="#top" aria-label="ЖК «Белая лилия» — наверх">
+      <img src="img/logotype-sm.webp" width="520" height="155" alt="" decoding="async">
+    </a>
+    <a class="pill pill-solid" href="#zayavka">Узнать цены</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="hero-frame" id="hero-frame">
+    <picture>
+      <source media="(max-width: 700px)" srcset="img/hero-facade-mob.webp" width="1000" height="1005">
+      <img src="img/hero-facade.webp" srcset="img/hero-facade-sm.webp 1000w, img/hero-facade.webp 1800w" sizes="100vw"
+           width="1800" height="1012" fetchpriority="high" decoding="async"
+           alt="Фасад ЖК «Белая лилия»: два трёхэтажных дома из светлого камня со стороны улицы">
+    </picture>
+  </div>
+  <div class="hero-veil"></div>
+  <div class="hero-inner">
+    <div class="wrap">
+      <div class="hero-copy">
+        <h1 class="words">Клубный квартал</h1>
+        <p>Два трёхэтажных дома из белого дагестанского камня в Заволжском районе Ярославля. Закрытый двор, аллея и потолки до 3,3 метра.</p>
+      </div>
+      <aside class="hero-note">
+        <b>Старт продаж скоро</b>
+        <span>Оставьте заявку — и узнайте о старте продаж первым.</span>
+        <a href="#zayavka">Оставить заявку</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="params">
+  <div class="wrap">
+    <div><b>2</b><span>дома в квартале</span></div>
+    <div><b>3</b><span>этажа, без лифта</span></div>
+    <div><b>до 3,3 м</b><span>высота потолков</span></div>
+    <div><b>1–3</b><span>комнатные квартиры</span></div>
+  </div>
+</section>
+
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-row">
+    <span>Заволжский район Ярославля</span><span>Два дома по три этажа</span><span>Потолки 3 и 3,3 метра</span><span>Своё газовое отопление</span><span>Двор без машин</span><span>Белый дагестанский камень</span>
+    <span>Заволжский район Ярославля</span><span>Два дома по три этажа</span><span>Потолки 3 и 3,3 метра</span><span>Своё газовое отопление</span><span>Двор без машин</span><span>Белый дагестанский камень</span>
+  </div>
+</div>
+
+<section class="section" id="about">
+  <div class="wrap split">
+    <div class="stack">
+      <p class="eyebrow fade">О проекте</p>
+      <h2 class="words">Камерность вместо жилого массива</h2>
+      <p class="lede fade d1">«Победоносцев ГРУПП» готовит к запуску новый проект в Заволжском районе Ярославля — два трёхэтажных дома с индивидуальным газовым отоплением. Небольшой масштаб выбран намеренно: он создаёт ощущение приватности, которого не бывает в высотном квартале.</p>
+      <dl class="spec fade d2">
+        <div><dt>Формат</dt><dd>Два дома по три этажа, закрытая огороженная территория</dd></div>
+        <div><dt>Отопление</dt><dd>Индивидуальное газовое — температура и счета под вашим контролем</dd></div>
+        <div><dt>Материал</dt><dd>Белейший дагестанский камень, современная неоклассика</dd></div>
+      </dl>
+    </div>
+    <figure class="frame frame-tall mask par">
+      <img src="img/detail-facade.webp" srcset="img/detail-facade-sm.webp 640w, img/detail-facade.webp 972w" sizes="(min-width:768px) 46vw, 100vw"
+           width="972" height="1325" loading="lazy" decoding="async" alt="Деталь фасада: каменная плоскость, окна и французские балконы">
+    </figure>
+  </div>
+</section>
+
+<section class="section heights bg-lily">
+  <img class="lily lily-2 par" src="img/lily.webp" width="900" height="928" alt="" loading="lazy" decoding="async">
+  <div class="wrap">
+    <div class="stack">
+      <p class="eyebrow fade">Высота</p>
+      <h2 class="words">Воздух, который чувствуешь сразу</h2>
+      <p class="lede fade d1">На пространстве не экономили: высота меняет ощущение даже от компактной квартиры.</p>
+    </div>
+    <div class="metric fade d1"><b>3,0</b><span>1 и 2 этажи, м</span></div>
+    <div class="metric fade d2"><b>3,3</b><span>3 этаж, м</span></div>
+  </div>
+</section>
+
+<section class="section" id="yard">
+  <div class="wrap">
+    <div class="gal-head">
+      <div class="stack">
+        <p class="eyebrow fade">Двор</p>
+        <h2 class="words">Территория, закрытая от машин</h2>
+        <p class="lede fade d1">Аллея для неспешных прогулок, зоны отдыха, детские площадки и зелёные насаждения.</p>
+      </div>
+      <p class="gal-count fade d1">7 кадров проекта</p>
+    </div>
+
+    <div class="gal" id="gal">
+      <figure class="g-a">
+        <div class="shot"><img src="img/alley.webp" srcset="img/alley-sm.webp 900w, img/alley.webp 1800w" sizes="(min-width:640px) 44vw, 100vw"
+             width="1800" height="1013" loading="lazy" decoding="async" alt="Пешеходная аллея между домами"></div>
+        <figcaption><i>01</i>Аллея между домами</figcaption>
+      </figure>
+      <figure class="g-b">
+        <div class="shot"><img src="img/playground.webp" srcset="img/playground-sm.webp 900w, img/playground.webp 1800w" sizes="(min-width:640px) 44vw, 100vw"
+             width="1800" height="2400" loading="lazy" decoding="async" alt="Детская площадка с игровым комплексом"></div>
+        <figcaption><i>02</i>Детская площадка</figcaption>
+      </figure>
+      <figure class="g-c">
+        <div class="shot"><img src="img/yard-sand.webp" srcset="img/yard-sand-sm.webp 900w, img/yard-sand.webp 1800w" sizes="(min-width:640px) 44vw, 100vw"
+             width="1800" height="2400" loading="lazy" decoding="async" alt="Песочница и зона отдыха во дворе"></div>
+        <figcaption><i>03</i>Зона для самых маленьких</figcaption>
+      </figure>
+      <figure class="g-d">
+        <div class="shot"><img src="img/entrance.webp" srcset="img/entrance-sm.webp 900w, img/entrance.webp 1800w" sizes="(min-width:640px) 44vw, 100vw"
+             width="1800" height="2400" loading="lazy" decoding="async" alt="Входная группа с навесом и подсветкой"></div>
+        <figcaption><i>04</i>Входная группа</figcaption>
+      </figure>
+      <figure class="g-e">
+        <div class="shot"><img src="img/courtyard.webp" srcset="img/courtyard-sm.webp 900w, img/courtyard.webp 1800w" sizes="(min-width:640px) 44vw, 100vw"
+             width="1800" height="1013" loading="lazy" decoding="async" alt="Фасад дома со стороны двора"></div>
+        <figcaption><i>05</i>Фасад со стороны двора</figcaption>
+      </figure>
+      <figure class="g-f">
+        <div class="shot"><img src="img/yard-evening.webp" srcset="img/yard-evening-sm.webp 900w, img/yard-evening.webp 1800w" sizes="(min-width:640px) 44vw, 100vw"
+             width="1800" height="1013" loading="lazy" decoding="async" alt="Двор вечером с подсветкой дорожек"></div>
+        <figcaption><i>06</i>Вечернее освещение</figcaption>
+      </figure>
+      <figure class="g-g">
+        <div class="shot"><img src="img/aerial.webp" srcset="img/aerial-sm.webp 900w, img/aerial.webp 1800w" sizes="(min-width:640px) 44vw, 100vw"
+             width="1800" height="1013" loading="lazy" decoding="async" alt="Вид на квартал сверху"></div>
+        <figcaption><i>07</i>Квартал целиком</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="flats">
+  <div class="wrap">
+    <p class="eyebrow fade">Квартиры</p>
+    <h2 class="words" style="margin-top:12px">Три формата</h2>
+    <p class="lede fade d1" style="margin-top:18px">Планировки и цены публикуются в день старта продаж. Пока — то, что известно о каждом формате.</p>
+    <div class="flats">
+      <article class="fade"><span class="n">1</span><p>Компактная квартира, в которой три метра потолка меняют ощущение площади.</p><span class="tag">потолок 3,00</span></article>
+      <article class="fade d1"><span class="n">2</span><p>Отдельная спальня и общая гостиная — сценарий, который работает и через десять лет.</p><span class="tag">потолок 3,00</span></article>
+      <article class="fade d2"><span class="n">3</span><p>Комната каждому и место для общего стола. На третьем этаже — потолок 3,30.</p><span class="tag">до 3,30</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-lily" id="buy" style="background:var(--sand)">
+  <img class="lily lily-1 par" src="img/lily.webp" width="900" height="928" alt="" loading="lazy" decoding="async">
+  <div class="wrap">
+    <p class="eyebrow fade">Как купить</p>
+    <h2 class="words" style="margin-top:12px">Три шага</h2>
+    <div class="steps">
+      <article class="fade"><span class="n">01</span><h3>Заявка до старта</h3><p>Телефон и удобное время звонка — этого достаточно, чтобы попасть в список первых.</p></article>
+      <article class="fade d1"><span class="n">02</span><h3>Выбор квартиры</h3><p>В день старта звоним: цены, планировки, этажи и виды из окон.</p></article>
+      <article class="fade d2"><span class="n">03</span><h3>Договор по 214-ФЗ</h3><p>Бронирование, ипотечная программа и расчёты через эскроу-счёт.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section lead" id="zayavka" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="stack">
+      <p class="eyebrow fade">Запрос</p>
+      <h2 class="words">Позвоним первым и назовём цены</h2>
+      <p class="lede fade d1">Оставьте телефон и удобное время — наберём в день старта продаж и пришлём планировки. Один звонок по делу, без рассылок.</p>
+      <p class="note fade d1">Или наберите сами: <a href="tel:+74852333362">+7 (4852) 33-33-62</a>, ежедневно с 9:00 до 20:00.</p>
+    </div>
+    <div class="fade d1">
+      <form id="lead-form" novalidate>
+        <div class="field">
+          <label for="name">Имя (необязательно)</label>
+          <input type="text" id="name" autocomplete="given-name">
+        </div>
+        <div class="field">
+          <label for="phone">Телефон</label>
+          <input type="tel" id="phone" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required aria-describedby="phone-err">
+          <p class="err" id="phone-err" hidden><span id="phone-err-text">Введите номер из 11 цифр.</span></p>
+        </div>
+        <div class="field">
+          <label for="time">Когда удобно принять звонок</label>
+          <select id="time">
+            <option>В ближайшее рабочее время</option>
+            <option>9:00 — 12:00</option>
+            <option>12:00 — 15:00</option>
+            <option>15:00 — 18:00</option>
+            <option>18:00 — 20:00</option>
+          </select>
+        </div>
+        <label class="consent" for="consent">
+          <input type="checkbox" id="consent" checked required>
+          <span>Согласен на обработку персональных данных</span>
+        </label>
+        <p class="err" id="consent-err" hidden>Без согласия мы не сможем перезвонить.</p>
+        <button class="btn" type="submit" id="submit-btn">Отправить запрос</button>
+      </form>
+      <div class="ok" id="form-ok" hidden>Заявка принята. Позвоним в выбранное время и первыми сообщим о старте продаж.</div>
+      <p aria-live="polite" id="live" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-lily">
+  <img class="lily lily-3 par" src="img/lily.webp" width="900" height="928" alt="" loading="lazy" decoding="async">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="#top" aria-label="ЖК «Белая лилия» — наверх"><img src="img/logotype-sm.webp" width="520" height="155" alt="" loading="lazy"></a>
+        <p style="margin-top:16px"><a href="tel:+74852333362" style="font-family:'Playfair Display',serif;font-size:22px;text-decoration:none">+7 (4852) 33-33-62</a></p>
+        <p class="note" style="margin-top:8px">Ежедневно с 9:00 до 20:00<br>Ярославль, Заволжский район</p>
+      </div>
+      <div>
+        <h2>Проект</h2>
+        <ul>
+          <li><a href="#about">О проекте</a></li>
+          <li><a href="#yard">Двор</a></li>
+          <li><a href="#flats">Квартиры</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Покупателю</h2>
+        <ul>
+          <li><a href="#buy">Как купить</a></li>
+          <li><a href="#zayavka">Оставить заявку</a></li>
+          <li><a href="https://xn--90acfdb1cddbd3a4d.xn--p1ai/" target="_blank" rel="noopener">Сайт застройщика</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Застройщик — ООО «СЗ «ПОБЕДОНОСЦЕВ ГРУПП». Информация на странице носит информационный характер и не является публичной офертой (ст. 437 ГК РФ). Изображения — визуализации проекта, могут отличаться от действительности. Проектная декларация будет опубликована на наш.дом.рф.</p>
+    </div>
+  </div>
+</footer>
+
+<nav class="callbar" aria-label="Быстрые действия">
+  <a class="c1" href="tel:+74852333362">Позвонить</a>
+  <a class="c2" href="#zayavka">Узнать цены</a>
+</nav>
+
+<script>
+(function(){
+  'use strict';
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root = document.documentElement;
+
+  /* Анимации включаются только при поддержке — иначе страница просто видна */
+  if (!reduce && 'IntersectionObserver' in window) {
+    root.classList.add('motion');
+
+    /* заголовки разбираются на слова — те поднимаются по очереди */
+    document.querySelectorAll('.words').forEach(function(h){
+      var parts = h.textContent.trim().split(/\s+/);
+      h.textContent = '';
+      parts.forEach(function(w, i){
+        var sp = document.createElement('span');
+        sp.textContent = w + (i < parts.length - 1 ? '\u00A0' : '');
+        sp.style.transitionDelay = (i * 0.055).toFixed(3) + 's';
+        h.appendChild(sp);
+      });
+    });
+
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px -10% 0px', threshold:.1});
+    document.querySelectorAll('.rise, .fade, .words, .mask').forEach(function(el){ io.observe(el); });
+    /* Подстраховка: анимация — украшение, содержимое обязано появиться.
+       Всё, что попало в экран, раскрываем сами; через 6 секунд снимаем
+       скрытие со всего, что осталось, даже если наблюдатель молчит. */
+    var pending = '.rise:not(.in), .fade:not(.in), .words:not(.in), .mask:not(.in)';
+    function revealVisible(){
+      document.querySelectorAll(pending).forEach(function(el){
+        var r = el.getBoundingClientRect();
+        if (r.top < innerHeight + 80 && r.bottom > -80) el.classList.add('in');
+      });
+    }
+    revealVisible();
+    window.addEventListener('scroll', revealVisible, {passive:true});
+    window.addEventListener('resize', revealVisible, {passive:true});
+    var ticks = 0;
+    var guard = setInterval(function(){
+      revealVisible();
+      if (++ticks > 14) {
+        clearInterval(guard);
+        document.querySelectorAll(pending).forEach(function(el){ el.classList.add('in'); });
+      }
+    }, 400);
+
+    /* Цифры досчитываются — но только целые: дробное значение
+       нельзя показывать промежуточным, это фактическая характеристика. */
+    var counter2 = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        counter2.unobserve(e.target);
+        var el = e.target, raw = el.textContent.trim();
+        var m = raw.match(/^(\d+)$/);
+        if (!m) return;
+        var target = parseInt(m[1], 10);
+        var t0 = performance.now(), dur = 900;
+        var finish = setTimeout(function(){ el.textContent = raw; }, dur + 400);
+        requestAnimationFrame(function tick(now){
+          var k = Math.min(1, (now - t0) / dur);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - k, 3)));
+          if (k < 1) requestAnimationFrame(tick);
+          else { clearTimeout(finish); el.textContent = raw; }
+        });
+      });
+    }, {threshold:.6});
+    document.querySelectorAll('.params b').forEach(function(b){ counter2.observe(b); });
+  }
+
+  var fine = matchMedia('(hover:hover) and (pointer:fine)').matches;
+
+  /* кнопки слегка тянутся к курсору */
+  if (!reduce && fine) {
+    document.querySelectorAll('.pill, .btn').forEach(function(b){
+      b.addEventListener('mousemove', function(ev){
+        var r = b.getBoundingClientRect();
+        var mx = (ev.clientX - r.left - r.width / 2) / r.width;
+        var my = (ev.clientY - r.top - r.height / 2) / r.height;
+        b.style.transform = 'translate(' + (mx * 8).toFixed(1) + 'px,' + (my * 6).toFixed(1) + 'px)';
+      });
+      b.addEventListener('mouseleave', function(){ b.style.transform = ''; });
+    });
+  }
+
+
+  /* Камера едет по кадру: медленное панорамирование при скролле */
+  var frame = document.getElementById('hero-frame');
+  var bar = document.getElementById('top-bar');
+  var last = 0;
+  var progress = document.getElementById('progress-bar');
+  var prevY = 0;
+  function onScroll(){
+    var y = window.scrollY || 0;
+    bar.classList.toggle('solid', y > 80);
+    if (progress) {
+      var max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = (max > 0 ? (y / max) * 100 : 0).toFixed(2) + '%';
+    }
+    if (!reduce) {
+      bar.style.transform = (y > prevY && y > 420) ? 'translateY(-100%)' : 'translateY(0)';
+      prevY = y;
+    }
+    if (reduce || !frame) return;
+    var now = Date.now();
+    if (now - last < 16) return;
+    last = now;
+    var h = frame.parentElement.offsetHeight || 1;
+    var p = Math.max(0, Math.min(1, y / h));
+    frame.style.transform = 'translate3d(0,' + (p * 9).toFixed(2) + '%,0) scale(' + (1 + p * 0.06).toFixed(3) + ')';
+
+    document.querySelectorAll('.par').forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > innerHeight + 200) return;
+      var k = (r.top + r.height / 2 - innerHeight / 2) / innerHeight;
+      el.style.transform = 'translate3d(0,' + (k * -22).toFixed(1) + 'px,0)';
+    });
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+
+  /* Форма */
+  var form = document.getElementById('lead-form');
+  var phone = document.getElementById('phone');
+  var perr = document.getElementById('phone-err');
+  var ptext = document.getElementById('phone-err-text');
+  var consent = document.getElementById('consent');
+  var cerr = document.getElementById('consent-err');
+  var btn = document.getElementById('submit-btn');
+  var ok = document.getElementById('form-ok');
+  var live = document.getElementById('live');
+
+  function digits(v){
+    var d = v.replace(/\D/g,'');
+    if (d[0] === '8') d = '7' + d.slice(1);
+    if (d && d[0] !== '7') d = '7' + d;
+    return d.slice(0,11);
+  }
+  phone.addEventListener('input', function(){
+    var d = digits(phone.value);
+    if (!d) { phone.value = ''; return; }
+    var out = '+7';
+    if (d.length > 1) out += ' (' + d.slice(1,4);
+    if (d.length >= 5) out += ') ' + d.slice(4,7);
+    if (d.length >= 8) out += '-' + d.slice(7,9);
+    if (d.length >= 10) out += '-' + d.slice(9,11);
+    phone.value = out;
+    if (phone.getAttribute('aria-invalid') === 'true' && digits(phone.value).length === 11) setErr(null);
+  });
+  function setErr(m){
+    if (m) { ptext.textContent = m; perr.hidden = false; phone.setAttribute('aria-invalid','true'); }
+    else { perr.hidden = true; phone.removeAttribute('aria-invalid'); }
+  }
+  phone.addEventListener('blur', function(){
+    var d = digits(phone.value);
+    if (!d.length) return setErr('Укажите телефон — на него мы перезвоним.');
+    if (d.length !== 11) return setErr('Не хватает цифр: в российском номере их 11.');
+    setErr(null);
+  });
+  consent.addEventListener('change', function(){ if (consent.checked) cerr.hidden = true; });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var d = digits(phone.value);
+    if (d.length !== 11) { setErr(d.length ? 'Не хватает цифр: в российском номере их 11.' : 'Укажите телефон — на него мы перезвоним.'); phone.focus(); return; }
+    if (!consent.checked) { cerr.hidden = false; consent.focus(); return; }
+    setErr(null);
+    btn.disabled = true; btn.textContent = 'Отправляем…';
+    live.textContent = 'Отправляем заявку';
+
+    var lead = {
+      name: document.getElementById('name').value.trim() || 'Без имени',
+      phone: '+' + d,
+      callTime: document.getElementById('time').value,
+      page: location.href,
+      utm: location.search
+    };
+
+    // ── КУДА ОТПРАВЛЯТЬ ЗАЯВКИ: подставьте URL обработчика (CRM, Bitrix, почта) ──
+    var ENDPOINT = null;
+    var req = ENDPOINT
+      ? fetch(ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(lead)})
+      : new Promise(function(r){ console.log('Заявка (обработчик не подключён):', lead); setTimeout(r, 500); });
+
+    req.then(function(){
+      form.hidden = true; ok.hidden = false;
+      ok.setAttribute('tabindex','-1'); ok.focus();
+      live.textContent = 'Заявка принята.';
+      if (typeof ym === 'function' && window.YM_ID) ym(window.YM_ID, 'reachGoal', 'lead');
+    }).catch(function(){
+      btn.disabled = false; btn.textContent = 'Отправить запрос';
+      setErr('Не удалось отправить. Позвоните: +7 (4852) 33-33-62');
+    });
+  });
+})();
+</script>
+</body>
+</html>
