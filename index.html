@@ -300,12 +300,11 @@ html.motion .words.in span{transform:none;opacity:1}
   position:absolute;pointer-events:none;user-select:none;
   width:min(44vw,420px);height:auto;opacity:.07;
 }
-.lily-1{top:-14%;right:-8%;transform:rotate(12deg)}
-.lily-2{bottom:-20%;left:-10%;transform:rotate(154deg)}
-.lily-3{bottom:-24%;right:-6%;width:min(34vw,300px);opacity:.06}
-.lily-4{top:-10%;left:-9%;width:min(40vw,380px);transform:rotate(-24deg);opacity:.06}
-.lily-5{bottom:-18%;right:-11%;width:min(46vw,430px);transform:rotate(96deg);opacity:.055}
-.lily-6{top:-12%;right:-8%;width:min(38vw,340px);transform:rotate(38deg);opacity:.05}
+.lily-1{top:50%;right:-9%;width:min(40vw,380px);transform:translateY(-50%) rotate(14deg)}
+.lily-2{top:50%;left:-9%;width:min(38vw,350px);transform:translateY(-50%) rotate(158deg)}
+.lily-3{bottom:-26%;right:-6%;width:min(32vw,290px);opacity:.05}
+.lily-4{top:50%;left:-8%;width:min(36vw,340px);transform:translateY(-50%) rotate(-24deg);opacity:.06}
+.lily-5{top:50%;right:-8%;width:min(34vw,320px);transform:translateY(-50%) rotate(96deg);opacity:.055}
 @media (max-width:640px){ .lily-1{display:none} }
 html.motion .lily{transition:transform 1.2s var(--ease)}
 </style>
@@ -389,7 +388,7 @@ html.motion .lily{transition:transform 1.2s var(--ease)}
 </section>
 
 <section class="section heights bg-lily">
-  <img class="lily lily-2 par" src="img/lily.webp" width="900" height="928" alt="" loading="lazy" decoding="async">
+  <img class="lily lily-1 par" src="img/lily.webp" width="900" height="928" alt="" loading="lazy" decoding="async">
   <div class="wrap">
     <div class="stack">
       <p class="eyebrow fade">Высота</p>
@@ -401,8 +400,7 @@ html.motion .lily{transition:transform 1.2s var(--ease)}
   </div>
 </section>
 
-<section class="section bg-lily" id="yard">
-  <img class="lily lily-5 par" src="img/lily.webp" width="900" height="928" alt="" loading="lazy" decoding="async">
+<section class="section" id="yard">
   <div class="wrap">
     <div class="gal-head">
       <div class="stack">
@@ -455,7 +453,7 @@ html.motion .lily{transition:transform 1.2s var(--ease)}
 
 
 <section class="section bg-lily" id="buy" style="background:var(--sand)">
-  <img class="lily lily-1 par" src="img/lily.webp" width="900" height="928" alt="" loading="lazy" decoding="async">
+  <img class="lily lily-2 par" src="img/lily.webp" width="900" height="928" alt="" loading="lazy" decoding="async">
   <div class="wrap">
     <p class="eyebrow fade">Как купить</p>
     <h2 class="words" style="margin-top:12px">Три шага</h2>
@@ -468,7 +466,7 @@ html.motion .lily{transition:transform 1.2s var(--ease)}
 </section>
 
 <section class="section lead bg-lily" id="zayavka" style="background:var(--paper)">
-  <img class="lily lily-6 par" src="img/lily.webp" width="900" height="928" alt="" loading="lazy" decoding="async">
+  <img class="lily lily-5 par" src="img/lily.webp" width="900" height="928" alt="" loading="lazy" decoding="async">
   <div class="wrap">
     <div class="stack">
       <p class="eyebrow fade">Запрос</p>
